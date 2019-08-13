@@ -72,3 +72,22 @@ console.log(filter1);
 let totalSteps = filter1.map(step => step[0] + step[1]);
 
 totalSteps.forEach((step, index) => console.log(`Movement #${index}: ${step} step`));
+
+
+let myStr = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+
+let myArray = myStr.split(' ');
+
+console.log(myArray);
+
+const reducer = (accumulator, currentValue) => {
+    if (currentValue.length === 3) {
+        return accumulator += ' ';
+    } else {
+        return accumulator += currentValue[currentValue.length - 1].toUpperCase();
+    }
+}
+
+let decodedArray = myArray.reduce(reducer, ' ');
+
+console.log(decodedArray);
