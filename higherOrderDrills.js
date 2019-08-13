@@ -59,3 +59,16 @@ rocksWarning('High Pass');
 typhoonWarning('South Beach');
 tornadoWarning('Kansas');
 tornadoWarning('Oz');
+
+// forEach, filter and map
+// use filter to remove any items that move right or down in an array
+
+let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+const filter1 = turtleMovements.filter(turtleMovement => turtleMovement[0] >= 0 && turtleMovement[1] >= 0);
+
+console.log(filter1);
+//console.log(JSON.stringify(filter1, null, 2));
+
+let totalSteps = filter1.map(step => step[0] + step[1]);
+
+totalSteps.forEach((step, index) => console.log(`Movement #${index}: ${step} step`));
