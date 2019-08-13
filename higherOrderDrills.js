@@ -71,7 +71,7 @@ console.log(filter1);
 
 let totalSteps = filter1.map(step => step[0] + step[1]);
 
-totalSteps.forEach((step, index) => console.log(`Movement #${index}: ${step} step`));
+totalSteps.forEach((step, index) => console.log(`Movement #${index + 1}: ${step} step`));
 
 
 let myStr = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
